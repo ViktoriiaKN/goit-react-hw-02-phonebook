@@ -2,12 +2,9 @@ import { nanoid } from 'nanoid';
 import { Component } from 'react';
 
 export class App extends Component {
-  state = { contacts: [], name: '', number: '' };
+  state = { contacts: [], name: '', filter: '', number: '' };
 
   handleChange = evt => {
-    console.log(evt.target.name);
-    console.log(evt.target.value);
-
     this.setState({
       [evt.target.name]: evt.target.value,
     });
